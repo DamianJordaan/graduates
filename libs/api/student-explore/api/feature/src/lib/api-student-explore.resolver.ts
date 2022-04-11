@@ -3,10 +3,10 @@ import { ApiStudentExploreServiceFeatureModule } from '@graduates/api/student-ex
 import { Query, Resolver } from '@nestjs/graphql';
 @Resolver(() => ApiStudentExplore)
 export class ApiStudentExploreResolver {
-  constructor(private storageService: ApiStudentExploreServiceFeatureModule) {}
+  constructor(private studentExploreService: ApiStudentExploreServiceFeatureModule) {}
 
   @Query(() => [ApiStudentExplore])
-  storage(): Promise<ApiStudentExplore[]> {
-    return this.storageService.get_all();
+  studentExplore(): Promise<ApiStudentExplore[]> {
+    return this.studentExploreService.get_all();
   }
 }
