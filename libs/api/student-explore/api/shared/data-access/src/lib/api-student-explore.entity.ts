@@ -4,4 +4,16 @@ import { Field, ID, ObjectType } from '@nestjs/graphql';
 export class ApiStudentExplore {
   @Field(() => ID)
   StudentNumber!: string;
+
+  @Field()
+  StudentName: string;
+
+  @Field()
+  StudentBio: string;
+
+  @Field()
+  StudentPic: string;
+
+  @Field()
+  StudentTags: string;
 }
